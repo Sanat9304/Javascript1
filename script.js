@@ -1,15 +1,3 @@
-function getComputerChoice() {
-  let rps = ["rock", "paper", "scissors"];
-  let random = rps[Math.floor(Math.random() * rps.length)];
-  return random;
-}
-
-
-function getHumanChoice(){
-  let choice = prompt("Enter your choice:")
-  return choice
-}
-
 
 function getComputerChoice() {
   let rps = ["rock", "paper", "scissors"];
