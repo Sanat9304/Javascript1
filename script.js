@@ -10,8 +10,25 @@ function getHumanChoice(){
   return choice
 }
 
-let humanScore = 0
-let computerScore = 0
+
+function getComputerChoice() {
+  let rps = ["rock", "paper", "scissors"];
+  let random = rps[Math.floor(Math.random() * rps.length)];
+  return random;
+}
+
+
+function getHumanChoice(){
+  let choice = prompt("Enter your choice:")
+  return choice
+}
+
+
+  let humanScore = 0
+  let computerScore = 0
+
+function playGame(){
+  
 
 function playGround(humanChoice,computerChoice){
 
@@ -44,8 +61,17 @@ console.log(`You choose ${humanChoice}`)
 console.log(`Computer have choosen ${computerChoice}`);
 console.log(playGround(humanChoice,computerChoice))
 console.log(`Human Score : ${humanScore}`,"   ",`Computer Score : ${computerScore}`)
+}
 
 
+for (let i = 0; i < 5; i++) {
+  playGame();
+}
 
-
-
+if(humanScore>computerScore){
+  console.log("Congrats you are the winner")
+}else if (computerScore>humanScore){
+  console.log("Alas!You lost")
+}else{
+  console.log("Your match is overall DRAW")
+}
